@@ -5,3 +5,6 @@ This repository contains the source files for the book Hands On Computer Vision 
 The code is in the form of [Jupyter Notebooks](http://jupyter.org/). Unless specified otherwise, it is running using Python 3.5 (or higher) and TensorFlow 1.10
 
 
+## Index
+
+- [Chapter 2 - Introduction to TensorFLow](/ch2)
