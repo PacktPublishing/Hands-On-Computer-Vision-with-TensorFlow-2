@@ -1,4 +1,4 @@
-# Chapter 2: Computer Vision & Deep Learning – First Steps
+# Chapter 1: Computer Vision & Deep Learning – First Steps
 
 In this introductory chapter, a simple neuron network is developed from scratch, step by step:
 
