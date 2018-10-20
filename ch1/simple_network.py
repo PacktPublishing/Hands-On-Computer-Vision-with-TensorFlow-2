@@ -11,11 +11,13 @@ def derivated_sigmoid(y):   # sigmoid derivative function
 
 
 def loss_L2(pred, target):    # L2 loss function
-    return np.sum(np.square(pred - target)) / pred.shape[0] # opt. we divide by the batch size
+    return np.sum(np.square(pred - target)) / pred.shape[0]
+    # opt. for results not depending on the batch size (pred.shape[0]), we divide the loss by it
 
 
 def derivated_loss_L2(pred, target):    # L2 derivative function
     return 2 * (pred - target)
+    # we could add the batch size division here too, but it wouldn't really affect the training (just scaling down the derivatives)
 
 
 def cross_entropy(pred, target):    # cross-entropy loss function
@@ -32,6 +34,10 @@ class SimpleNetwork(object):
         num_inputs (int): The input vector size / number of input values.
         num_outputs (int): The output vector size.
         hidden_layers_sizes (list): A list of sizes for each hidden layer to add to the network
+        activation_function (callable): The activation function for all the layers
+        derivated_activation_function (callable): The derivated activation function
+        loss_function (callable): The loss function to train this network
+        derivated_loss_function (callable): The derivative of the loss function, for back-propagation
     Attributes:
         layers (list): The list of layers forming this simple network.
         loss_function (callable): The loss function to train this network.
@@ -156,4 +162,3 @@ class SimpleNetwork(object):
                 accuracy = np.NaN
             print("Epoch {:4d}: training loss = {:.6f} | val accuracy = {:.2f}%".format(i, epoch_loss, accuracy * 100))
         return losses, accuracies
-
