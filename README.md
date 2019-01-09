@@ -7,4 +7,6 @@ The code is in the form of [Jupyter Notebooks](http://jupyter.org/). Unless spec
 
 ## Index
 
+- [Chapter 1 - Computer Vision and Neural Networks](/ch1)
 - [Chapter 2 - Introduction to TensorFLow](/ch2)
+- [Chapter 3 - Modern Neural Networks](/ch3)
