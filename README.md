@@ -1,13 +1,13 @@
-# Hands On Computer Vision with Tensorflow
- - _Leverage deep learning to create powerful computer vision apps with Tensorflow and Keras._
+# Hands On Computer Vision with TensorFlow
+ - _Leverage deep learning to create powerful computer vision apps with TensorFlow and Keras._
 
-This repository contains the code for the book Hands On Computer Vision with Tensorflow by [Benjamin Planche](https://github.com/Aldream) and [Eliot Andres](https://github.com/EliotAndres), published by [Packt](https://www.packtpub.com/?utm_source=github).
+This repository contains the code for the book Hands On Computer Vision with TensorFlow by [Benjamin Planche](https://github.com/Aldream) and [Eliot Andres](https://github.com/EliotAndres), published by [Packt](https://www.packtpub.com/?utm_source=github).
 
 More precisely, this repository offers several notebooks to illustrate each of the chapters and their notions, as well as the complete sources for the advanced projects used as examples along the book. Note that this repository is meant to complement the book. Therefore, we suggest to check out its content for more detailed explanations and advanced tips.
 
 ## About the Book
 
-Computer vision is achieving a new frontier of capabilities in artificial intelligence including medical screening, self-driving cars and expression detection. TensorFlow is one of the most widely used AI frameworks that leverages deep convolutional neural networks to process complex data. This book explores Google's open source Tensorflow framework along its Keras API, and teaches how to apply them to solving advanced computer vision tasks. It will help you acquire the skills and understand vital concepts to be a part of the extraordinary advances in this domain. 
+Computer vision is achieving a new frontier of capabilities in artificial intelligence including medical screening, self-driving cars and expression detection. TensorFlow is one of the most widely used AI frameworks that leverages deep convolutional neural networks to process complex data. This book explores Google's open source TensorFlow framework along its Keras API, and teaches how to apply them to solving advanced computer vision tasks. It will help you acquire the skills and understand vital concepts to be a part of the extraordinary advances in this domain. 
 
 ## Technical Requirements
 
