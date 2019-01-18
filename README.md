@@ -1,7 +1,7 @@
 # Hands On Computer Vision with TensorFlow
  - _Leverage deep learning to create powerful computer vision apps with TensorFlow and Keras._
 
-This repository contains the code for the book Hands On Computer Vision with TensorFlow by [Benjamin Planche](https://github.com/Aldream) and [Eliot Andres](https://github.com/EliotAndres), published by [Packt](https://www.packtpub.com/?utm_source=github).
+This repository contains the code for the book Hands On Computer Vision with TensorFlow by [Eliot Andres](https://github.com/EliotAndres) and [Benjamin Planche](https://github.com/Aldream), published by [Packt](https://www.packtpub.com/?utm_source=github).
 
 More precisely, this repository offers several notebooks to illustrate each of the chapters and their notions, as well as the complete sources for the advanced projects used as examples along the book. Note that this repository is meant to complement the book. Therefore, we suggest to check out its content for more detailed explanations and advanced tips.
 
