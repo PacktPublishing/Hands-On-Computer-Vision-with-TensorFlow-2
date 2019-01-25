@@ -11,9 +11,13 @@ import Vision
 
 class VisionObjectRecognitionViewController: ViewController {
     
-    private var detectionOverlay: CALayer! = nil
+    var detectionOverlayLayer: CALayer?
+    var detectedFaceRectangleShapeLayer: CAShapeLayer?
     @IBOutlet weak var classificationLabel: UILabel!
-
+    
+    private let faceDetection = VNDetectFaceRectanglesRequest()
+    private let faceDetectionRequest = VNSequenceRequestHandler()
+    
     /// - Tag: MLModelSetup
     lazy var classificationRequest: VNCoreMLRequest = {
         do {
@@ -67,6 +71,22 @@ class VisionObjectRecognitionViewController: ViewController {
         
         let exifOrientation = exifOrientationFromDeviceOrientation()
         
+        do {
+            try faceDetectionRequest.perform([faceDetection], on: pixelBuffer, orientation: exifOrientation)
+            
+            guard let results = faceDetection.results as? [VNFaceObservation], results.isEmpty == false else {
+//                ready = true
+                return
+            }
+            
+            drawFaceObservations(results)
+            print(results)
+            
+        }  catch {
+            print("Failed to perform classification.\n\(error.localizedDescription)")
+        }
+        
+        
         let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: exifOrientation, options: [:])
         do {
             try imageRequestHandler.perform([self.classificationRequest])
@@ -75,11 +95,44 @@ class VisionObjectRecognitionViewController: ViewController {
         }
     }
     
+    func updateLayerGeometry() {
+        
+        guard let overlayLayer = self.detectionOverlayLayer
+            else {
+                return
+        }
+        
+        let bounds = rootLayer.bounds
+        var scale: CGFloat
+
+        let xScale: CGFloat = bounds.size.width / bufferSize.height
+        let yScale: CGFloat = bounds.size.height / bufferSize.width
+
+        scale = fmax(xScale, yScale)
+        if scale.isInfinite {
+            scale = 1.0
+        }
+        CATransaction.begin()
+        CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
+
+        // rotate the layer into screen orientation and scale and mirror
+        overlayLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(.pi / 2.0)).scaledBy(x: scale, y: -scale))
+        // center the layer
+        overlayLayer.position = CGPoint (x: bounds.midX, y: bounds.midY)
+
+        CATransaction.commit()
+        
+    }
+    
     override func setupAVCapture() {
         super.setupAVCapture()
         
         // setup Vision parts
+        self.setupVisionDrawingLayers()
+
         updateLayerGeometry()
+
+        
         classificationLabel.layer.zPosition = 2
 
         
@@ -87,8 +140,87 @@ class VisionObjectRecognitionViewController: ViewController {
         startCaptureSession()
     }
     
+    fileprivate func setupVisionDrawingLayers() {
+        let captureDeviceBounds = CGRect(x: 0,
+                                         y: 0,
+                                         width: bufferSize.width,
+                                         height: bufferSize.height)
+        
+        let captureDeviceBoundsCenterPoint = CGPoint(x: captureDeviceBounds.midX,
+                                                     y: captureDeviceBounds.midY)
+        
+        let normalizedCenterPoint = CGPoint(x: 0.5, y: 0.5)
+        
+        guard let rootLayer = self.rootLayer else {
+            print("ERROR: view was not property initialized")
+            return
+        }
+        
+        let overlayLayer = CALayer()
+        overlayLayer.name = "DetectionOverlay"
+        overlayLayer.masksToBounds = true
+        overlayLayer.anchorPoint = normalizedCenterPoint
+        overlayLayer.bounds = captureDeviceBounds
+        overlayLayer.position = CGPoint(x: rootLayer.bounds.midX, y: rootLayer.bounds.midY)
+        
+        let faceRectangleShapeLayer = CAShapeLayer()
+        faceRectangleShapeLayer.name = "RectangleOutlineLayer"
+        faceRectangleShapeLayer.bounds = captureDeviceBounds
+        faceRectangleShapeLayer.anchorPoint = normalizedCenterPoint
+        faceRectangleShapeLayer.position = captureDeviceBoundsCenterPoint
+        faceRectangleShapeLayer.fillColor = nil
+        faceRectangleShapeLayer.strokeColor = UIColor.green.withAlphaComponent(0.7).cgColor
+        faceRectangleShapeLayer.lineWidth = 5
+        faceRectangleShapeLayer.shadowOpacity = 0.7
+        faceRectangleShapeLayer.shadowRadius = 5
+        
+        
+        overlayLayer.addSublayer(faceRectangleShapeLayer)
+        rootLayer.addSublayer(overlayLayer)
+        
+        self.detectionOverlayLayer = overlayLayer
+        self.detectedFaceRectangleShapeLayer = faceRectangleShapeLayer
+        
+        self.updateLayerGeometry()
+    }
+    
+    fileprivate func drawFaceObservations(_ faceObservations: [VNFaceObservation]) {
+        guard let faceRectangleShapeLayer = self.detectedFaceRectangleShapeLayer
+            else {
+                return
+        }
+        
+        CATransaction.begin()
+        
+        CATransaction.setValue(NSNumber(value: true), forKey: kCATransactionDisableActions)
+        
+        let faceRectanglePath = CGMutablePath()
+        let faceLandmarksPath = CGMutablePath()
+        
+        for faceObservation in faceObservations {
+            self.addIndicators(to: faceRectanglePath,
+                               faceLandmarksPath: faceLandmarksPath,
+                               for: faceObservation)
+        }
+        
+        faceRectangleShapeLayer.path = faceRectanglePath
+        
+        self.updateLayerGeometry()
+        
+        CATransaction.commit()
+    }
+    
+    fileprivate func addIndicators(to faceRectanglePath: CGMutablePath, faceLandmarksPath: CGMutablePath, for faceObservation: VNFaceObservation) {
+        let displaySize = bufferSize
+        
+        let faceBounds = VNImageRectForNormalizedRect(faceObservation.boundingBox, Int(displaySize.width), Int(displaySize.height))
+        faceRectanglePath.addRect(faceBounds)
+        
+    }
+    
     
 }
+
 
 
 public func top(_ k: Int, _ observations: [VNClassificationObservation]) -> [(String, Double)] {

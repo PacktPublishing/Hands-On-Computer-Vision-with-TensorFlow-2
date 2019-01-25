@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F148BB1721F57A5F00299F2A /* mobilenet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F148BB1621F57A5F00299F2A /* mobilenet.mlmodel */; };
 		F1B97EFA21D0511400435B1E /* VisionObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B97EF921D0511400435B1E /* VisionObjectRecognitionViewController.swift */; };
-		F1C7DE6421DAA0FE000043D9 /* mobilenet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F1C7DE6321DAA0FE000043D9 /* mobilenet.mlmodel */; };
 		F1F4E38B21D04BF200575BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F4E38A21D04BF200575BBC /* AppDelegate.swift */; };
 		F1F4E38D21D04BF200575BBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F4E38C21D04BF200575BBC /* ViewController.swift */; };
 		F1F4E39021D04BF200575BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F4E38E21D04BF200575BBC /* Main.storyboard */; };
@@ -17,8 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F148BB1621F57A5F00299F2A /* mobilenet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = mobilenet.mlmodel; sourceTree = "<group>"; };
 		F1B97EF921D0511400435B1E /* VisionObjectRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionViewController.swift; sourceTree = "<group>"; };
-		F1C7DE6321DAA0FE000043D9 /* mobilenet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = mobilenet.mlmodel; path = ../../../../../../Downloads/mobilenet.mlmodel; sourceTree = "<group>"; };
 		F1F4E38721D04BF200575BBC /* Core ML Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core ML Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F4E38A21D04BF200575BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1F4E38C21D04BF200575BBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 				F1F4E38E21D04BF200575BBC /* Main.storyboard */,
 				F1B97EF921D0511400435B1E /* VisionObjectRecognitionViewController.swift */,
 				F1F4E39121D04BF300575BBC /* Assets.xcassets */,
-				F1C7DE6321DAA0FE000043D9 /* mobilenet.mlmodel */,
+				F148BB1621F57A5F00299F2A /* mobilenet.mlmodel */,
 				F1F4E39321D04BF300575BBC /* LaunchScreen.storyboard */,
 				F1F4E39621D04BF300575BBC /* Info.plist */,
 			);
@@ -141,10 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C7DE6421DAA0FE000043D9 /* mobilenet.mlmodel in Sources */,
 				F1B97EFA21D0511400435B1E /* VisionObjectRecognitionViewController.swift in Sources */,
 				F1F4E38D21D04BF200575BBC /* ViewController.swift in Sources */,
 				F1F4E38B21D04BF200575BBC /* AppDelegate.swift in Sources */,
+				F148BB1721F57A5F00299F2A /* mobilenet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
