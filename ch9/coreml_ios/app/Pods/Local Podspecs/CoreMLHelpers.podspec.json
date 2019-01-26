@@ -1,0 +1,22 @@
+{
+  "name": "CoreMLHelpers",
+  "version": "0.2.0",
+  "summary": "Types and functions that make it a little easier to work with Core ML in Swift.",
+  "homepage": "https://github.com/hollance/CoreMLHelpers",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE.txt"
+  },
+  "authors": {
+    "Matthijs Hollemans": "matt@machinethink.net"
+  },
+  "source": {
+    "git": "https://github.com/hollance/CoreMLHelpers.git",
+    "branch": "master"
+  },
+  "source_files": "CoreMLHelpers/**/*",
+  "platforms": {
+    "ios": "11.0"
+  },
+  "swift_version": "4.0"
+}

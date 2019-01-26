@@ -1,0 +1,6 @@
+framework module CoreMLHelpers {
+  umbrella header "CoreMLHelpers-umbrella.h"
+
+  export *
+  module * { export * }
+}

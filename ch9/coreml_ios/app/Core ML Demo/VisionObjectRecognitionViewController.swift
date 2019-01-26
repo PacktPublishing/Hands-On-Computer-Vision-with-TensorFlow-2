@@ -8,6 +8,7 @@ Contains the object recognition view controller for the Breakfast Finder.
 import UIKit
 import AVFoundation
 import Vision
+import CoreMLHelpers
 
 class VisionObjectRecognitionViewController: ViewController {
     
@@ -36,6 +37,13 @@ class VisionObjectRecognitionViewController: ViewController {
         } catch {
             fatalError("Failed to load Vision ML model: \(error)")
         }
+    }()
+    
+    private lazy var dumbModel: VNCoreMLModel = try! VNCoreMLModel(for: DumbDetection().model)
+    private lazy var dumbRequest: VNCoreMLRequest = {
+        let request = VNCoreMLRequest(model: dumbModel)
+        request.imageCropAndScaleOption = .scaleFill
+        return request
     }()
     
     /// Updates the UI with the results of the classification.
@@ -74,25 +82,61 @@ class VisionObjectRecognitionViewController: ViewController {
         do {
             try faceDetectionRequest.perform([faceDetection], on: pixelBuffer, orientation: exifOrientation)
             
-            guard let results = faceDetection.results as? [VNFaceObservation], results.isEmpty == false else {
+            guard let faceObservations = faceDetection.results as? [VNFaceObservation], faceObservations.isEmpty == false else {
 //                ready = true
                 return
             }
             
-            drawFaceObservations(results)
-            print(results)
+            drawFaceObservations(faceObservations)
+            
+            for faceObservation in faceObservations {
+                
+                let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .right, options: [:])
+//                let region = VNNormalizedRectForImageRect(faceObservation.boundingBox.integral, Int(bufferSize.width), Int(bufferSize.height))
+
+//                x goes from top to bottom
+//                y goes from right to left
+                
+//                x goes from lower left
+                
+                let box = faceObservation.boundingBox
+                let region = CGRect(x: box.minY, y: 1 - box.maxX, width: box.height, height:box.width)
+                print(box)
+                dumbRequest.regionOfInterest = region
+                let requestHandlerOptions: [VNImageOption: AnyObject] = [:]
+
+                let dumbHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .right, options: requestHandlerOptions)
+//                <-- X
+//                y goes up, origin is at bottom right
+                
+                try dumbHandler.perform([dumbRequest])
+
+                guard let observations = dumbRequest.results as? [VNCoreMLFeatureValueObservation]
+                    else { fatalError("unexpected result type from VNCoreMLRequest1") }
+                let predictions = observations[0].featureValue.multiArrayValue as? MLMultiArray
+
+
+                let image: UIImage = (predictions?.image(min: 0, max: 1)!)!
+                print(" ")
+
+                self.classificationRequest.regionOfInterest = region
+//r
+                do {
+                    try imageRequestHandler.perform([self.classificationRequest])
+                } catch {
+                    print(error)
+                }
+               
+            }
+            
             
         }  catch {
             print("Failed to perform classification.\n\(error.localizedDescription)")
         }
+
+
         
         
-        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: exifOrientation, options: [:])
-        do {
-            try imageRequestHandler.perform([self.classificationRequest])
-        } catch {
-            print(error)
-        }
     }
     
     func updateLayerGeometry() {
@@ -116,7 +160,7 @@ class VisionObjectRecognitionViewController: ViewController {
         CATransaction.setValue(kCFBooleanTrue, forKey: kCATransactionDisableActions)
 
         // rotate the layer into screen orientation and scale and mirror
-        overlayLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(.pi / 2.0)).scaledBy(x: scale, y: -scale))
+        overlayLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(.pi / 2.0)).scaledBy(x: scale, y: scale))
         // center the layer
         overlayLayer.position = CGPoint (x: bounds.midX, y: bounds.midY)
 
@@ -129,12 +173,8 @@ class VisionObjectRecognitionViewController: ViewController {
         
         // setup Vision parts
         self.setupVisionDrawingLayers()
-
         updateLayerGeometry()
-
-        
         classificationLabel.layer.zPosition = 2
-
         
         // start the capture
         startCaptureSession()
@@ -177,7 +217,7 @@ class VisionObjectRecognitionViewController: ViewController {
         
         overlayLayer.addSublayer(faceRectangleShapeLayer)
         rootLayer.addSublayer(overlayLayer)
-        
+
         self.detectionOverlayLayer = overlayLayer
         self.detectedFaceRectangleShapeLayer = faceRectangleShapeLayer
         
@@ -195,11 +235,9 @@ class VisionObjectRecognitionViewController: ViewController {
         CATransaction.setValue(NSNumber(value: true), forKey: kCATransactionDisableActions)
         
         let faceRectanglePath = CGMutablePath()
-        let faceLandmarksPath = CGMutablePath()
         
         for faceObservation in faceObservations {
             self.addIndicators(to: faceRectanglePath,
-                               faceLandmarksPath: faceLandmarksPath,
                                for: faceObservation)
         }
         
@@ -210,22 +248,25 @@ class VisionObjectRecognitionViewController: ViewController {
         CATransaction.commit()
     }
     
-    fileprivate func addIndicators(to faceRectanglePath: CGMutablePath, faceLandmarksPath: CGMutablePath, for faceObservation: VNFaceObservation) {
+    fileprivate func addIndicators(to faceRectanglePath: CGMutablePath, for faceObservation: VNFaceObservation) {
         let displaySize = bufferSize
         
         let faceBounds = VNImageRectForNormalizedRect(faceObservation.boundingBox, Int(displaySize.width), Int(displaySize.height))
         faceRectanglePath.addRect(faceBounds)
-        
     }
-    
     
 }
 
-
-
-public func top(_ k: Int, _ observations: [VNClassificationObservation]) -> [(String, Double)] {
-    let items = observations.map { ($0.identifier, Double($0.confidence)) }
-    return Array(items
-        .sorted(by: { a, b -> Bool in a.1 > b.1 })
-        .prefix(through: min(k, observations.count) - 1))
+extension String {
+    func image() -> UIImage? {
+        let size = CGSize(width: 40, height: 40)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        UIColor.white.set()
+        let rect = CGRect(origin: .zero, size: size)
+        UIRectFill(CGRect(origin: .zero, size: size))
+        (self as AnyObject).draw(in: rect, withAttributes: [.font: UIFont.systemFont(ofSize: 40)])
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
 }
