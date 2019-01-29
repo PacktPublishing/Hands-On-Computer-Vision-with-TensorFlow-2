@@ -101,8 +101,12 @@ class VisionObjectRecognitionViewController: ViewController {
                 
                 let box = faceObservation.boundingBox
                 let region = CGRect(x: box.minY, y: 1 - box.maxX, width: box.height, height:box.width)
+                
+                let percentage: CGFloat = 0.1
+                
+                let largeRegion = region.insetBy(dx: region.width * -percentage, dy: region.height * -percentage)
                 print(box)
-                dumbRequest.regionOfInterest = region
+                dumbRequest.regionOfInterest = largeRegion
                 let requestHandlerOptions: [VNImageOption: AnyObject] = [:]
 
                 let dumbHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .right, options: requestHandlerOptions)
@@ -119,7 +123,7 @@ class VisionObjectRecognitionViewController: ViewController {
                 let image: UIImage = (predictions?.image(min: 0, max: 1)!)!
                 print(" ")
 
-                self.classificationRequest.regionOfInterest = region
+                self.classificationRequest.regionOfInterest = largeRegion
 //r
                 do {
                     try imageRequestHandler.perform([self.classificationRequest])
@@ -214,10 +218,32 @@ class VisionObjectRecognitionViewController: ViewController {
         faceRectangleShapeLayer.shadowOpacity = 0.7
         faceRectangleShapeLayer.shadowRadius = 5
         
+        let particleEmitter = CAEmitterLayer()
+        
+        particleEmitter.emitterPosition = CGPoint(x: view.frame.width / 2.0, y: -50)
+        particleEmitter.emitterShape = .line
+        particleEmitter.emitterSize = CGSize(width: view.frame.width, height: 1)
+        particleEmitter.renderMode = .additive
+        
+        let cell = CAEmitterCell()
+        cell.birthRate = 2
+        cell.lifetime = 5.0
+        cell.velocity = 100
+        cell.velocityRange = 50
+        cell.emissionLongitude = .pi
+        cell.spinRange = 5
+        cell.scale = 0.5
+        cell.scaleRange = 0.25
+        cell.color = UIColor(white: 1, alpha: 0.1).cgColor
+        cell.alphaSpeed = -0.025
+        cell.contents = UIImage(named: "particle")?.cgImage
+        particleEmitter.emitterCells = [cell]
+        
+        
         
         overlayLayer.addSublayer(faceRectangleShapeLayer)
         rootLayer.addSublayer(overlayLayer)
-
+        
         self.detectionOverlayLayer = overlayLayer
         self.detectedFaceRectangleShapeLayer = faceRectangleShapeLayer
         
@@ -257,16 +283,3 @@ class VisionObjectRecognitionViewController: ViewController {
     
 }
 
-extension String {
-    func image() -> UIImage? {
-        let size = CGSize(width: 40, height: 40)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        UIColor.white.set()
-        let rect = CGRect(origin: .zero, size: size)
-        UIRectFill(CGRect(origin: .zero, size: size))
-        (self as AnyObject).draw(in: rect, withAttributes: [.font: UIFont.systemFont(ofSize: 40)])
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
-    }
-}
