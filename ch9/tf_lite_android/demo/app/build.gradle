@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "27.0.3"
     defaultConfig {
-        applicationId "android.example.com.tflitecamerademo"
+        applicationId "me.ndres.tflitedemo"
         // Required by Camera2 API.
         minSdkVersion 21
         targetSdkVersion 26

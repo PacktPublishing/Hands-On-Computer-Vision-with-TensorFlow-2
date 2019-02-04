@@ -21,7 +21,7 @@
     android:background="#bb7700"
     android:orientation="horizontal">
 
-    <com.example.android.tflitecamerademo.AutoFitTextureView
+    <me.ndres.tflitedemo.AutoFitTextureView
       android:id="@+id/texture"
       android:layout_width="0dp"
       android:layout_height="match_parent"
