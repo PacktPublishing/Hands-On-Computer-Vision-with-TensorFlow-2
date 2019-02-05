@@ -92,26 +92,18 @@ class VisionObjectRecognitionViewController: ViewController {
             for faceObservation in faceObservations {
                 
                 let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .right, options: [:])
-//                let region = VNNormalizedRectForImageRect(faceObservation.boundingBox.integral, Int(bufferSize.width), Int(bufferSize.height))
 
-//                x goes from top to bottom
-//                y goes from right to left
-                
-//                x goes from lower left
-                
                 let box = faceObservation.boundingBox
                 let region = CGRect(x: box.minY, y: 1 - box.maxX, width: box.height, height:box.width)
                 
                 let percentage: CGFloat = 0.1
                 
                 let largeRegion = region.insetBy(dx: region.width * -percentage, dy: region.height * -percentage)
-                print(box)
                 dumbRequest.regionOfInterest = largeRegion
                 let requestHandlerOptions: [VNImageOption: AnyObject] = [:]
 
                 let dumbHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: .right, options: requestHandlerOptions)
-//                <-- X
-//                y goes up, origin is at bottom right
+
                 
                 try dumbHandler.perform([dumbRequest])
 
@@ -119,12 +111,10 @@ class VisionObjectRecognitionViewController: ViewController {
                     else { fatalError("unexpected result type from VNCoreMLRequest1") }
                 let predictions = observations[0].featureValue.multiArrayValue as? MLMultiArray
 
-
                 let image: UIImage = (predictions?.image(min: 0, max: 1)!)!
-                print(" ")
 
                 self.classificationRequest.regionOfInterest = largeRegion
-//r
+                
                 do {
                     try imageRequestHandler.perform([self.classificationRequest])
                 } catch {
