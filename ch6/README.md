@@ -2,7 +2,7 @@
 
 In Chapter 6 of the book, several paradigms for _pixel-precise_ applications were covered. We introduced **_encoders-decoders_** and some specific architectures like **_U-Net_** and **_FCN_**. We presented how to apply them to multiple tasks from _**image denoising**_ to **_semantic segmentation_**. We also demonstrated how different solutions can be combined to tackle more advanced problems like instance **_segmentation_**.
 
-In this folder, notebooks tackling these various notions can be found. Addtionally, some of the key code snippets can be found in the other Python files.
+In this folder, readers can find several notebooks tackling these various notions. Addtionally, some of the key code snippets are compiled into reusable Python files.
 
 ## Notebooks
 
@@ -25,6 +25,6 @@ In this folder, notebooks tackling these various notions can be found. Addtional
 - [fcn.py](fcn.py): Keras implementation of the _FCN-8s_ model (code presented in notebook [6.5](./ch6_nb5_semantic_segmentation_for_smart_cars_with_fcn8s.ipynb)).
 - [keras_custom_callbacks.py](keras_custom_callbacks.py): Custom callbacks to monitor the training of Keras models (code presented in notebook [6.2](./ch6_nb2_denoising_with_autoencoders.ipynb)).
 - [plot_utils.py](plot_utils.py): Plot helper functions (code presented in notebooks [6.1](./ch6_nb1_intro_to_autoencoders.ipynb)- [6.2](./ch6_nb2_denoising_with_autoencoders.ipynb)).
-- [tf_losses_and_metrics.py](tf_losses_and_metrics.py): Custom TensorFlow/Keras losses and metrics for encoders-decoders (code presented in notebooks [6.1](./ch6_nb1_intro_to_autoencoders.ipynb)- [6.2](./ch6_nb2_denoising_with_autoencoders.ipynb)-[6.5](./ch6_nb5_semantic_segmentation_for_smart_cars_with_fcn8s.ipynb)-[6-6](./ch6_nb6_object_and_instance_segmentation_for_smart_cars_with_unet.ipynb)).
+- [tf_losses_and_metrics.py](tf_losses_and_metrics.py): Custom TensorFlow/Keras losses and metrics for encoders-decoders (code presented in notebooks [6.1](./ch6_nb1_intro_to_autoencoders.ipynb)-[6.2](./ch6_nb2_denoising_with_autoencoders.ipynb)-[6.5](./ch6_nb5_semantic_segmentation_for_smart_cars_with_fcn8s.ipynb)-[6-6](./ch6_nb6_object_and_instance_segmentation_for_smart_cars_with_unet.ipynb)).
 - [tf_math.py](tf_math.py): Advanced math/morphological functions in TensorFlow (code presented in notebooks [6.2](./ch6_nb2_denoising_with_autoencoders.ipynb)-[6.5](./ch6_nb5_semantic_segmentation_for_smart_cars_with_fcn8s.ipynb)).
 - [unet.py](unet.py): Keras implementation of the _U-Net_ model (code presented in notebook [6.3](./ch6_nb3_super_resolution_with_dae.ipynb)).
