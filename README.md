@@ -33,9 +33,9 @@ The code is in the form of [Jupyter](http://jupyter.org/) notebooks. Unless spec
  - Chapter 5
     - TBD
  - Chapter 6 - [Enhancing and Segmenting Images](/ch6)
-    - 6.1 - [Introduction to Auto-Encoders](./ch6_nb1_intro_to_autoencoders.ipynb)
-    - 6.2 - [Denoising with Auto-Encoders](./ch6_nb2_denoising_with_autoencoders.ipynb)
-    - 6.3 - [Super-Resolution with Deep Auto-Encoders](./ch6_nb3_super_resolution_with_dae.ipynb)
-    - 6.4 - [Data Preparation for Smart Car Applications](./ch6_nb4_data_preparation_for_smart_car_apps.ipynb)
-    - 6.5 - [Semantic Segmentation for Smart Cars with FCN-8s](./ch6_nb5_semantic_segmentation_for_smart_cars_with_fcn8s.ipynb)
-    - 6.6 - [Object and Instance Segmentation for Smart Cars with U-Net](./ch6_nb6_object_and_instance_segmentation_for_smart_cars_with_unet.ipynb)
+    - 6.1 - [Introduction to Auto-Encoders](./ch6/ch6_nb1_intro_to_autoencoders.ipynb)
+    - 6.2 - [Denoising with Auto-Encoders](./ch6/ch6_nb2_denoising_with_autoencoders.ipynb)
+    - 6.3 - [Super-Resolution with Deep Auto-Encoders](./ch6/ch6_nb3_super_resolution_with_dae.ipynb)
+    - 6.4 - [Data Preparation for Smart Car Applications](./ch6/ch6_nb4_data_preparation_for_smart_car_apps.ipynb)
+    - 6.5 - [Semantic Segmentation for Smart Cars with FCN-8s](./ch6/ch6_nb5_semantic_segmentation_for_smart_cars_with_fcn8s.ipynb)
+    - 6.6 - [Object and Instance Segmentation for Smart Cars with U-Net](./ch6/ch6_nb6_object_and_instance_segmentation_for_smart_cars_with_unet.ipynb)
