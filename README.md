@@ -17,7 +17,7 @@ The code is in the form of [Jupyter](http://jupyter.org/) notebooks. Unless spec
 
 - Chapter 1 - [Computer Vision and Neural Networks](/ch1)
     - 1.1 - [Neural Networks from Scratch](./ch1/ch1_notebook.ipynb)
-- Chapter 2 - [Introduction to TensorFLow](/ch2)
+- Chapter 2 - [Introduction to TensorFlow](/ch2)
     - TBD
 - Chapter 3 - [Modern Neural Networks](/ch3)
     - 3.1 - [Basic CNN Operations](./ch3/ch3_notebook_1_basic_ops.ipynb)
