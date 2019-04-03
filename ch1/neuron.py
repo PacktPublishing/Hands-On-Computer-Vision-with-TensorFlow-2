@@ -1,4 +1,27 @@
+"""
+File name: neuron.py
+Author: Benjamin Planche
+Date created: 10.12.2018
+Date last modified: 11:25 03.04.2019
+Python Version: 3.6
+
+Copyright = "Copyright (C) 2018-2019 of Packt"
+Credits = ["Eliot Andres, Benjamin Planche"]
+License = "MIT"
+Version = "1.0.0"
+Maintainer = "non"
+Status = "Prototype" # "Prototype", "Development", or "Production"
+"""
+
+#==============================================================================
+# Imported Modules
+#==============================================================================
+
 import numpy as np
+
+#==============================================================================
+# Class Definition
+#==============================================================================
 
 
 class Neuron(object):
@@ -32,6 +55,11 @@ class Neuron(object):
         """
         z = np.dot(x, self.W) + self.b
         return self.activation_function(z)
+
+
+#==============================================================================
+# Main Call
+#==============================================================================
 
 
 # Demonstrating how to use the Neuron:

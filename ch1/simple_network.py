@@ -1,6 +1,29 @@
+"""
+File name: simple_network.py
+Author: Benjamin Planche
+Date created: 10.12.2018
+Date last modified: 11:27 03.04.2019
+Python Version: 3.6
+
+Copyright = "Copyright (C) 2018-2019 of Packt"
+Credits = ["Eliot Andres, Benjamin Planche"]
+License = "MIT"
+Version = "1.0.0"
+Maintainer = "non"
+Status = "Prototype" # "Prototype", "Development", or "Production"
+"""
+
+#==============================================================================
+# Imported Modules
+#==============================================================================
+
 import numpy as np
 from fully_connected_layer import FullyConnectedLayer
 
+
+#==============================================================================
+# Function Definitions
+#==============================================================================
 
 def sigmoid(x):     # sigmoid function
     return 1 / (1 + np.exp(-x)) # y
@@ -11,13 +34,11 @@ def derivated_sigmoid(y):   # sigmoid derivative function
 
 
 def loss_L2(pred, target):    # L2 loss function
-    return np.sum(np.square(pred - target)) / pred.shape[0]
-    # opt. for results not depending on the batch size (pred.shape[0]), we divide the loss by it
+    return np.sum(np.square(pred - target)) / pred.shape[0] # opt. we divide by the batch size
 
 
 def derivated_loss_L2(pred, target):    # L2 derivative function
     return 2 * (pred - target)
-    # we could add the batch size division here too, but it wouldn't really affect the training (just scaling down the derivatives)
 
 
 def cross_entropy(pred, target):    # cross-entropy loss function
@@ -27,6 +48,10 @@ def cross_entropy(pred, target):    # cross-entropy loss function
 def derivated_cross_entropy(pred, target):    # cross-entropy derivative function
     return (pred - target) / (pred * (1 - pred))
 
+
+#==============================================================================
+# Class Definition
+#==============================================================================
 
 class SimpleNetwork(object):
     """A simple fully-connected NN.
@@ -162,3 +187,4 @@ class SimpleNetwork(object):
                 accuracy = np.NaN
             print("Epoch {:4d}: training loss = {:.6f} | val accuracy = {:.2f}%".format(i, epoch_loss, accuracy * 100))
         return losses, accuracies
+

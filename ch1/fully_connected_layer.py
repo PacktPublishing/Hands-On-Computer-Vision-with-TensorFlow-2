@@ -1,4 +1,27 @@
+"""
+File name: fully_connected_layer.py
+Author: Benjamin Planche
+Date created: 10.12.2018
+Date last modified: 11:24 03.04.2019
+Python Version: 3.6
+
+Copyright = "Copyright (C) 2018-2019 of Packt"
+Credits = ["Eliot Andres, Benjamin Planche"]
+License = "MIT"
+Version = "1.0.0"
+Maintainer = "non"
+Status = "Prototype" # "Prototype", "Development", or "Production"
+"""
+
+#==============================================================================
+# Imported Modules
+#==============================================================================
+
 import numpy as np
+
+#==============================================================================
+# Class Definition
+#==============================================================================
 
 
 class FullyConnectedLayer(object):
@@ -77,6 +100,10 @@ class FullyConnectedLayer(object):
         self.W -= epsilon * self.dL_dW
         self.b -= epsilon * self.dL_db
 
+
+#==============================================================================
+# Main Call
+#==============================================================================
 
 if __name__ == "__main__":
     np.random.seed(42)      # Fixing the seed for the random number generation, to get reproducable results.
