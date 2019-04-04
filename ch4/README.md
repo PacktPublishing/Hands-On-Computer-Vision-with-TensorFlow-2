@@ -11,7 +11,7 @@ Chapter 4 is dedicated to influential CNN architectures like _VGG_, _Inception_,
 (Reminder: Notebooks are better visualized with `nbviewer`: click [here](https://nbviewer.jupyter.org/github/PacktPublishing/Hands-On-Computer-Vision-with-Tensorflow/blob/master/ch4) to continue on `nbviewer.jupyter.org`.)
 
 - 4.1 - [Implementing ResNet from Scratch](./ch4_nb1_implement_resnet_from_scratch.ipynb)
-    - Implement block by block the very-deep _ResNet_ architecture (_ResNet-18_, _ResNet-50_, ResNet-152_) and apply to the classification of a large dataset (_CIFAR-100_) obtained through `tensorflow-datasets`.
+    - Implement block by block the very-deep _ResNet_ architecture (_ResNet-18_, _ResNet-50_, _ResNet-152_) and apply to the classification of a large dataset (_CIFAR-100_) obtained through `tensorflow-datasets`.
 - 4.2 - [Reusing Models from Keras Applications](./ch4_nb2_reuse_models_from_keras_apps.ipynb)
     - Discover how to reuse pre-implemented models available in `keras.applications`, training another version of _ResNet-50_.
 - 4.3 - [Fetching Models from TensorFlow Hub](./ch4_nb3_fetch_models_from_tf_hub.ipynb)
