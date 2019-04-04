@@ -8,7 +8,7 @@ Chapter 4 is dedicated to influential CNN architectures like _VGG_, _Inception_,
 
 ## :notebook: Notebooks
 
-(Reminder: Notebooks are better visualized with `nbviewer`: click [here](https://nbviewer.jupyter.org/github/PacktPublishing/Hands-On-Computer-Vision-with-Tensorflow/blob/master/ch1) to continue on `nbviewer.jupyter.org`.)
+(Reminder: Notebooks are better visualized with `nbviewer`: click [here](https://nbviewer.jupyter.org/github/PacktPublishing/Hands-On-Computer-Vision-with-Tensorflow/blob/master/ch4) to continue on `nbviewer.jupyter.org`.)
 
 - 4.1 - [Implementing ResNet from Scratch](./ch4_nb1_implement_resnet_from_scratch.ipynb)
     - Implement block by block the very-deep _ResNet_ architecture (_ResNet-18_, _ResNet-50_, ResNet-152_) and apply to the classification of a large dataset (_CIFAR-100_) obtained through `tensorflow-datasets`.
