@@ -7,8 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EF42DDB41E8192BCA03AE56 /* Pods_Core_ML_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FCDAF6917C1121790EE768 /* Pods_Core_ML_Demo.framework */; };
+		F1150A3321FCADE500A6B611 /* mobilenet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F1150A3221FCADE500A6B611 /* mobilenet.mlmodel */; };
+		F1150A3521FCCC8C00A6B611 /* DumbDetection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F1150A3421FCCC8C00A6B611 /* DumbDetection.mlmodel */; };
+		F1150AC121FCD16200A6B611 /* CoreMLHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1150AC021FCD16200A6B611 /* CoreMLHelpers.framework */; };
+		F1150AE021FCD41C00A6B611 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1150ADF21FCD41C00A6B611 /* CoreML.framework */; };
+		F1150AEF21FCD44300A6B611 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AE221FCD44200A6B611 /* Array+Extensions.swift */; };
+		F1150AF021FCD44300A6B611 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AE321FCD44200A6B611 /* Math.swift */; };
+		F1150AF121FCD44300A6B611 /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AE421FCD44200A6B611 /* UIImage+CVPixelBuffer.swift */; };
+		F1150AF221FCD44300A6B611 /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AE521FCD44200A6B611 /* Predictions.swift */; };
+		F1150AF321FCD44300A6B611 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AE621FCD44200A6B611 /* UIImage+Extensions.swift */; };
+		F1150AF421FCD44300A6B611 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AE721FCD44200A6B611 /* CGImagePropertyOrientation.swift */; };
+		F1150AF521FCD44300A6B611 /* UIImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AE821FCD44200A6B611 /* UIImage+RawBytes.swift */; };
+		F1150AF621FCD44300A6B611 /* MLMultiArray+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AE921FCD44200A6B611 /* MLMultiArray+Helpers.swift */; };
+		F1150AF721FCD44300A6B611 /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AEA21FCD44200A6B611 /* CVPixelBuffer+Helpers.swift */; };
+		F1150AF821FCD44300A6B611 /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AEB21FCD44200A6B611 /* CGImage+CVPixelBuffer.swift */; };
+		F1150AF921FCD44300A6B611 /* NonMaxSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AEC21FCD44200A6B611 /* NonMaxSuppression.swift */; };
+		F1150AFA21FCD44300A6B611 /* CGImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AED21FCD44200A6B611 /* CGImage+RawBytes.swift */; };
+		F1150AFB21FCD44300A6B611 /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1150AEE21FCD44200A6B611 /* MLMultiArray+Image.swift */; };
 		F1B97EFA21D0511400435B1E /* VisionObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B97EF921D0511400435B1E /* VisionObjectRecognitionViewController.swift */; };
-		F1C7DE6421DAA0FE000043D9 /* mobilenet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F1C7DE6321DAA0FE000043D9 /* mobilenet.mlmodel */; };
 		F1F4E38B21D04BF200575BBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F4E38A21D04BF200575BBC /* AppDelegate.swift */; };
 		F1F4E38D21D04BF200575BBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F4E38C21D04BF200575BBC /* ViewController.swift */; };
 		F1F4E39021D04BF200575BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F4E38E21D04BF200575BBC /* Main.storyboard */; };
@@ -17,8 +34,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19AB33F00B9853EE5CA53457 /* Pods-Core ML Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core ML Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Core ML Demo/Pods-Core ML Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		D0FCDAF6917C1121790EE768 /* Pods_Core_ML_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core_ML_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA85A89B4C70970ED83F4915 /* Pods-Core ML Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core ML Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Core ML Demo/Pods-Core ML Demo.release.xcconfig"; sourceTree = "<group>"; };
+		F1150A3221FCADE500A6B611 /* mobilenet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = mobilenet.mlmodel; sourceTree = "<group>"; };
+		F1150A3421FCCC8C00A6B611 /* DumbDetection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DumbDetection.mlmodel; sourceTree = "<group>"; };
+		F1150ABE21FCD10600A6B611 /* CoreMLHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreMLHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1150AC021FCD16200A6B611 /* CoreMLHelpers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMLHelpers.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Demo-gwtbeavpkdtdedbyqmclvtcwcscs/Build/Products/Debug-iphoneos/CoreMLHelpers.framework"; sourceTree = "<group>"; };
+		F1150ADF21FCD41C00A6B611 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		F1150AE221FCD44200A6B611 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		F1150AE321FCD44200A6B611 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		F1150AE421FCD44200A6B611 /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		F1150AE521FCD44200A6B611 /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
+		F1150AE621FCD44200A6B611 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		F1150AE721FCD44200A6B611 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		F1150AE821FCD44200A6B611 /* UIImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RawBytes.swift"; sourceTree = "<group>"; };
+		F1150AE921FCD44200A6B611 /* MLMultiArray+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Helpers.swift"; sourceTree = "<group>"; };
+		F1150AEA21FCD44200A6B611 /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
+		F1150AEB21FCD44200A6B611 /* CGImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		F1150AEC21FCD44200A6B611 /* NonMaxSuppression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonMaxSuppression.swift; sourceTree = "<group>"; };
+		F1150AED21FCD44200A6B611 /* CGImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+RawBytes.swift"; sourceTree = "<group>"; };
+		F1150AEE21FCD44200A6B611 /* MLMultiArray+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Image.swift"; sourceTree = "<group>"; };
 		F1B97EF921D0511400435B1E /* VisionObjectRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionViewController.swift; sourceTree = "<group>"; };
-		F1C7DE6321DAA0FE000043D9 /* mobilenet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = mobilenet.mlmodel; path = ../../../../../../Downloads/mobilenet.mlmodel; sourceTree = "<group>"; };
 		F1F4E38721D04BF200575BBC /* Core ML Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core ML Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F4E38A21D04BF200575BBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1F4E38C21D04BF200575BBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +70,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1150AE021FCD41C00A6B611 /* CoreML.framework in Frameworks */,
+				F1150AC121FCD16200A6B611 /* CoreMLHelpers.framework in Frameworks */,
+				4EF42DDB41E8192BCA03AE56 /* Pods_Core_ML_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5374CC2BADFA005855E0B9EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19AB33F00B9853EE5CA53457 /* Pods-Core ML Demo.debug.xcconfig */,
+				EA85A89B4C70970ED83F4915 /* Pods-Core ML Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F1150ABC21FCD0D800A6B611 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1150ADF21FCD41C00A6B611 /* CoreML.framework */,
+				F1150AC021FCD16200A6B611 /* CoreMLHelpers.framework */,
+				F1150ABE21FCD10600A6B611 /* CoreMLHelpers.framework */,
+				D0FCDAF6917C1121790EE768 /* Pods_Core_ML_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1150AE121FCD44200A6B611 /* CoreMLHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				F1150AE221FCD44200A6B611 /* Array+Extensions.swift */,
+				F1150AE321FCD44200A6B611 /* Math.swift */,
+				F1150AE421FCD44200A6B611 /* UIImage+CVPixelBuffer.swift */,
+				F1150AE521FCD44200A6B611 /* Predictions.swift */,
+				F1150AE621FCD44200A6B611 /* UIImage+Extensions.swift */,
+				F1150AE721FCD44200A6B611 /* CGImagePropertyOrientation.swift */,
+				F1150AE821FCD44200A6B611 /* UIImage+RawBytes.swift */,
+				F1150AE921FCD44200A6B611 /* MLMultiArray+Helpers.swift */,
+				F1150AEA21FCD44200A6B611 /* CVPixelBuffer+Helpers.swift */,
+				F1150AEB21FCD44200A6B611 /* CGImage+CVPixelBuffer.swift */,
+				F1150AEC21FCD44200A6B611 /* NonMaxSuppression.swift */,
+				F1150AED21FCD44200A6B611 /* CGImage+RawBytes.swift */,
+				F1150AEE21FCD44200A6B611 /* MLMultiArray+Image.swift */,
+			);
+			path = CoreMLHelpers;
+			sourceTree = "<group>";
+		};
 		F1F4E37E21D04BF200575BBC = {
 			isa = PBXGroup;
 			children = (
+				F1150AE121FCD44200A6B611 /* CoreMLHelpers */,
 				F1F4E38921D04BF200575BBC /* Core ML Demo */,
 				F1F4E38821D04BF200575BBC /* Products */,
+				F1150ABC21FCD0D800A6B611 /* Frameworks */,
+				5374CC2BADFA005855E0B9EC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,7 +146,8 @@
 				F1F4E38E21D04BF200575BBC /* Main.storyboard */,
 				F1B97EF921D0511400435B1E /* VisionObjectRecognitionViewController.swift */,
 				F1F4E39121D04BF300575BBC /* Assets.xcassets */,
-				F1C7DE6321DAA0FE000043D9 /* mobilenet.mlmodel */,
+				F1150A3421FCCC8C00A6B611 /* DumbDetection.mlmodel */,
+				F1150A3221FCADE500A6B611 /* mobilenet.mlmodel */,
 				F1F4E39321D04BF300575BBC /* LaunchScreen.storyboard */,
 				F1F4E39621D04BF300575BBC /* Info.plist */,
 			);
@@ -77,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1F4E39921D04BF300575BBC /* Build configuration list for PBXNativeTarget "Core ML Demo" */;
 			buildPhases = (
+				D3F40806C96C028CA06C3AF2 /* [CP] Check Pods Manifest.lock */,
 				F1F4E38321D04BF200575BBC /* Sources */,
 				F1F4E38421D04BF200575BBC /* Frameworks */,
 				F1F4E38521D04BF200575BBC /* Resources */,
+				88F0DBF96C025036751A5B44 /* [CP] Embed Pods Frameworks */,
+				4ED0F8749A6B464C13B82C15 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,15 +223,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4ED0F8749A6B464C13B82C15 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Core ML Demo/Pods-Core ML Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88F0DBF96C025036751A5B44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Core ML Demo/Pods-Core ML Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CoreMLHelpers/CoreMLHelpers.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreMLHelpers.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Core ML Demo/Pods-Core ML Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3F40806C96C028CA06C3AF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Core ML Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F1F4E38321D04BF200575BBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C7DE6421DAA0FE000043D9 /* mobilenet.mlmodel in Sources */,
+				F1150AF821FCD44300A6B611 /* CGImage+CVPixelBuffer.swift in Sources */,
+				F1150A3321FCADE500A6B611 /* mobilenet.mlmodel in Sources */,
+				F1150AF721FCD44300A6B611 /* CVPixelBuffer+Helpers.swift in Sources */,
+				F1150AEF21FCD44300A6B611 /* Array+Extensions.swift in Sources */,
+				F1150AFA21FCD44300A6B611 /* CGImage+RawBytes.swift in Sources */,
+				F1150A3521FCCC8C00A6B611 /* DumbDetection.mlmodel in Sources */,
+				F1150AF621FCD44300A6B611 /* MLMultiArray+Helpers.swift in Sources */,
+				F1150AF421FCD44300A6B611 /* CGImagePropertyOrientation.swift in Sources */,
+				F1150AFB21FCD44300A6B611 /* MLMultiArray+Image.swift in Sources */,
+				F1150AF021FCD44300A6B611 /* Math.swift in Sources */,
+				F1150AF221FCD44300A6B611 /* Predictions.swift in Sources */,
+				F1150AF521FCD44300A6B611 /* UIImage+RawBytes.swift in Sources */,
 				F1B97EFA21D0511400435B1E /* VisionObjectRecognitionViewController.swift in Sources */,
 				F1F4E38D21D04BF200575BBC /* ViewController.swift in Sources */,
+				F1150AF321FCD44300A6B611 /* UIImage+Extensions.swift in Sources */,
 				F1F4E38B21D04BF200575BBC /* AppDelegate.swift in Sources */,
+				F1150AF921FCD44300A6B611 /* NonMaxSuppression.swift in Sources */,
+				F1150AF121FCD44300A6B611 /* UIImage+CVPixelBuffer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +443,7 @@
 		};
 		F1F4E39A21D04BF300575BBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19AB33F00B9853EE5CA53457 /* Pods-Core ML Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +462,7 @@
 		};
 		F1F4E39B21D04BF300575BBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA85A89B4C70970ED83F4915 /* Pods-Core ML Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
