@@ -477,6 +477,8 @@ public class Camera2BasicFragment extends Fragment
             .setLandmarkType(FaceDetector.NO_LANDMARKS)
             .build();
 
+    faceDetector.isOperational();
+
     final float textSizePx =
             TypedValue.applyDimension(
                     TypedValue.COMPLEX_UNIT_DIP, TEXT_SIZE_DIP, getResources().getDisplayMetrics());

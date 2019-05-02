@@ -1,7 +1,7 @@
 import * as tf from '@tensorflow/tfjs';
 import * as faceapi from 'face-api.js';
 
-const isDev = process.env.NODE_ENV === 'development'
+const isDev = process.env.NODE_ENV === 'development';
 
 const MOBILENET_MODEL_PATH = isDev ? 'http://localhost:1235/emotion_detection/model.json' : './emotion_detection/model.json';
 const DETECTION_MODEL_PATH = isDev ? 'http://localhost:1235/face_detection': './face_detection';
@@ -9,13 +9,12 @@ const FACE_EXPRESSIONS = ["angry","disgust","scared", "happy", "sad", "surprised
 
 
 const IMAGE_SIZE = 48;
-const TOPK_PREDICTIONS = 10;
 
 let mobilenet;
 const mobilenetDemo = async () => {
   status('Loading model...');
 
-  mobilenet = await tf.loadModel(MOBILENET_MODEL_PATH);
+  mobilenet = await tf.loadGraphModel(MOBILENET_MODEL_PATH);
 
   // Warmup the model. This isn't necessary, but makes the first prediction
   // faster. Call `dispose` to release the WebGL memory allocated for the return
@@ -30,15 +29,12 @@ const mobilenetDemo = async () => {
  * probabilities of the top K classes.
  */
 async function predict(imgElement) {
-  status('Predicting...');
+  let img = await tf.browser.fromPixels(imgElement, 3).toFloat();
 
-  const startTime = performance.now();
-  let img = await tf.fromPixels(imgElement, 3).toFloat();
-  img = tf.image.resizeBilinear(img, [IMAGE_SIZE, IMAGE_SIZE]);
-  img = img.mean(2);
   const logits = tf.tidy(() => {
     // tf.fromPixels() returns a Tensor from an image element.
-
+    img = tf.image.resizeBilinear(img, [IMAGE_SIZE, IMAGE_SIZE]);
+    img = img.mean(2);
     const offset = tf.scalar(127.5);
     // Normalize the image from [0, 255] to [-1, 1].
     const normalized = img.sub(offset).div(offset);
@@ -50,13 +46,7 @@ async function predict(imgElement) {
     return mobilenet.predict(batched);
   });
 
-  // Convert logits to probabilities and class names.
-  // const classes = await getTopKClasses(logits, TOPK_PREDICTIONS);
-  const totalTime = performance.now() - startTime;
-  status(`Done in ${Math.floor(totalTime)}ms`);
-
-  const values = await logits.data();
-  return values
+  return logits
 }
 
 /**
@@ -76,7 +66,6 @@ export async function getTopClass(values) {
   });
 
   return valuesAndIndices[0]
-
 }
 
 //
@@ -100,8 +89,9 @@ window.onPlay = async function onPlay() {
 
     const faceCanvases = await faceapi.extractFaces(video, [detection])
 
-    const values = await predict(faceCanvases[0]);
+    const prediction = await predict(faceCanvases[0]);
 
+    const values = await prediction.data();
     const topClass = await getTopClass(values)
 
     // TODO(eliot): fix this hack. we should not use private properties
