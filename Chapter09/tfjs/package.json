@@ -1,0 +1,32 @@
+{
+  "name": "tfjs-examples-mobilenet",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "private": true,
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "1.0.4",
+    "face-api.js": "0.19.0",
+    "parcel-plugin-static-files-copy": "^2.0.0"
+  },
+  "scripts": {
+    "watch": "./serve.sh",
+    "build": "cross-env NODE_ENV=production parcel build index.html  --no-minify --public-url ./",
+    "link-local": "yalc link",
+    "postinstall": "yarn upgrade --pattern @tensorflow"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "clang-format": "~1.2.2",
+    "cross-env": "^5.1.6",
+    "http-server": "~0.10.0",
+    "parcel-bundler": "~1.10.3",
+    "yalc": "~1.0.0-pre.22"
+  }
+}

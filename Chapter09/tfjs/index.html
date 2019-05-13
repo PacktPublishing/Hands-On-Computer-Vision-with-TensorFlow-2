@@ -1,0 +1,77 @@
+<!doctype html>
+
+<head>
+  <title>TensorFlow.js: Using a pretrained MobileNet</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .merge {
+      margin-left: 0;
+      margin-top:  0;
+      position:    absolute;
+    }
+  </style>
+  <!--<link rel="stylesheet" href="../shared/tfjs-examples.css" />-->
+</head>
+
+<style>
+  .pred-container {
+    margin-bottom: 20px;
+  }
+
+  .pred-container > div {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+
+  .row {
+    display: table-row;
+  }
+  .cell {
+    display: table-cell;
+    padding-right: 20px;
+  }
+  #overlay, .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #file-container {
+    margin-bottom: 20px;
+  }
+</style>
+
+<body>
+<div class="tfjs-example-container">
+  <section class='title-area'>
+    <h1>TensorFlow.js: Emotion detection</h1>
+  </section>
+
+  <section>
+    <p class='section-head'>Description</p>
+    <p>
+
+    </p>
+  </section>
+
+  <section>
+    <p class='section-head'>Status</p>
+    <div id="status"></div>
+  </section>
+
+  <section>
+
+    <div style="position: relative;width: 300px;" class="margin">
+      <video onloadedmetadata="onPlay(this)" id="video" preload playsinline autoplay loop muted class="merge"></video>
+      <canvas id="overlay" />
+    </div>
+    <br>
+
+
+  </section>
+
+  <script src="index.js"></script>
+</div>
+</body>
