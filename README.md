@@ -21,8 +21,8 @@ The code is in the form of [Jupyter](http://jupyter.org/) notebooks. Unless spec
 
 - Chapter 1 - [Computer Vision and Neural Networks](/Chapter01)
     - 1.1 - [Building and Training a Neural Network from Scratch](./Chapter01/ch1_nb1_build_and_train_neural_network_from_scratch.ipynb)
-- Chapter 2 - [Introduction to TensorFlow](/Chapter02)
-    - TBD
+- Chapter 2 - [TensorFlow Basics and Training a Model ](/Chapter02)
+    - 2.1 - [Training a model with Keras](./Chapter02/ch2_nb1_mnist_keras.ipynb)
 - Chapter 3 - [Modern Neural Networks](/Chapter03)
     - 3.1 - [Discovering CNNs' Basic Operations](./Chapter03/ch3_nb1_discover_cnns_basic_ops.ipynb)
     - 3.2 - [Building and Training our First CNN with TensorFlow 2 and Keras](./Chapter03/ch3_nb2_build_and_train_first_cnn_with_tf2.ipynb)
@@ -35,7 +35,7 @@ The code is in the form of [Jupyter](http://jupyter.org/) notebooks. Unless spec
     - 4.4 - [Applying Transfer Learning](./Chapter04/ch4_nb4_apply_transfer_learning.ipynb)
     - 4.5 - (Appendix) [Exploring ImageNet and Tiny-ImageNet](./Chapter04/ch4_nb5_explore_imagenet_and_its_tiny_version.ipynb)
  - Chapter 5
-    - TBD
+    - 5.1 - (TBD) Training a YOLO model
  - Chapter 6 - [Enhancing and Segmenting Images](./Chapter06)
     - 6.1 - [Discovering Auto-Encoders](./Chapter06/ch6_nb1_discover_autoencoders.ipynb)
     - 6.2 - [Denoising with Auto-Encoders](./Chapter06/ch6_nb2_denoise_with_autoencoders.ipynb)
@@ -51,7 +51,15 @@ The code is in the form of [Jupyter](http://jupyter.org/) notebooks. Unless spec
     - 7.4 - (TBD) Apply Domain Adaptation Methods to Bridge the Realism Gap
     - 7.5 - (TBD) Create Images with Variational Auto-Encoders (VAEs)
     - 7.6 - (TBD) Create Images with Generative-Adversarial Networks (GANs)
-
+- Chapter 8 - [Video and Recurrent Neural Networks ](/Chapter08)
+    - 8.1 - [Action recognition using an LSTM](./Chapter08/ch8_nb1_action_recognition.ipynb)
+- Chapter 9 - [Optimizing Models and Deploying on Mobile Devices](/Chapter09)
+    - 9.1 - [Model profiling](./Chapter09/ch9_nb1_profiling.ipynb)
+    - 9.2 - [Non-maximum suppression algorithm comparison](./Chapter09/ch9_nb2_nms_speed_comparison.ipynb)
+    - 9.3 - [Training an emotion detection model and converting it for mobile devices](./Chapter09/ch9_nb3_train_model.ipynb)
+    - [iOS app](./Chapter09/coreml_ios)
+    - [Android app](./Chapter09/tf_lite_android)
+    - [Tensorflow.js app](./Chapter09/tfjs)
 ## :scroll: Citing
 
 If you use the code samples in your study/work or want to cite the book, please use:

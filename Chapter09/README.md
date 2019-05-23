@@ -23,7 +23,8 @@ Install [yarn](https://yarnpkg.com/en/) and run:
     yarn watch
     
 ## Running on iOS
-Folder: coreml_ios
+Folder: `coreml_ios`
+
 You must have Xcode and [Cocoa Pods](https://cocoapods.org/) installed as well as a mac computer.
 
     cd coreml_ios/app
@@ -31,4 +32,6 @@ You must have Xcode and [Cocoa Pods](https://cocoapods.org/) installed as well a
     open Core\ ML\ Demo.xcworkspace
 
 ## Running on Android
-It is recommended to have [Android Studio](https://developer.android.com/studio) installed
+Folder: `tf_lite_android`
+
+[Android Studio](https://developer.android.com/studio) must be installed.
