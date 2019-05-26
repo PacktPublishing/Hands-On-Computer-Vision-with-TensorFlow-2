@@ -89,22 +89,23 @@ class DynamicPlotCallback(tf.keras.callbacks.Callback):
 #==============================================================================
 
 class SimpleLogCallback(tf.keras.callbacks.Callback):
-    """ Keras callback for simple console logs.
-    """
+    """ Keras callback for simple, denser console logs."""
 
-    def __init__(self, metrics_dict, num_epochs='?',
+    def __init__(self, metrics_dict, num_epochs='?', log_frequency=1,
                  metric_string_template='\033[1m[[name]]\033[0m = \033[94m{[[value]]:5.3f}\033[0m'):
         """
         Initialize the Callback.
         :param metrics_dict:            Dictionary containing mappings for metrics names/keys
                                         e.g. {"accuracy": "acc", "val. accuracy": "val_acc"}
         :param num_epochs:              Number of training epochs
+        :param log_frequency:           Log frequency (in epochs)
         :param metric_string_template:  (opt.) String template to print each metric
         """
         super().__init__()
 
         self.metrics_dict = collections.OrderedDict(metrics_dict)
         self.num_epochs = num_epochs
+        self.log_frequency = log_frequency
 
         # We build a format string to later print the metrics, (e.g. "Epoch 0/9: loss = 1.00; val-loss = 2.00")
         log_string_template = 'Epoch {0:2}/{1}: '
@@ -127,8 +128,9 @@ class SimpleLogCallback(tf.keras.callbacks.Callback):
         print("Training: \033[91mend\033[0m.")
 
     def on_epoch_end(self, epoch, logs={}):
-        values = [logs[self.metrics_dict[metric_name]] for metric_name in self.metrics_dict]
-        print(self.log_string_template.format(epoch, self.num_epochs, *values))
+        if (epoch - 1) % self.log_frequency == 0 or epoch == self.num_epochs:
+            values = [logs[self.metrics_dict[metric_name]] for metric_name in self.metrics_dict]
+            print(self.log_string_template.format(epoch, self.num_epochs, *values))
 
 #==============================================================================
 

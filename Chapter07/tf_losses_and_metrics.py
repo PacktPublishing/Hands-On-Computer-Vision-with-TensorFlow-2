@@ -313,4 +313,3 @@ class WeightedSegmentationLoss(SegmentationLoss):
             
         loss = super().__call__(y_true, y_pred, y_weight)
         return loss
-
