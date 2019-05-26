@@ -27,7 +27,7 @@ Convolutional neural networks can be built to output multi-dimensional data. The
 
 - [cityscapes_utils.py](cityscapes_utils.py): utility functions for the _Cityscapes_ dataset (code presented in notebook [6.4](./ch6_nb4_preparing_data_for_smart_car_apps.ipynb)).
 - [fcn.py](fcn.py): functional implementation of the _FCN-8s_ architecture (code presented in notebook [6.5](./ch6_nb5_build_and_train_a_fcn8s_semantic_segmentation_model_for_smart_cars.ipynb)).
-- [keras_custom_callbacks.py](keras_custom_callbacks.py): custom Keras _callbacks_ to monitor the trainings of models (code presented in notebooks [4.1](./ch4_nb1_implement_resnet_from_scratch.ipynb) and [6.2](./ch6_nb2_denoise_with_autoencoders.ipynb)).
+- [keras_custom_callbacks.py](keras_custom_callbacks.py): custom Keras _callbacks_ to monitor the trainings of models (code presented in notebooks [4.1](../Chapter04/ch4_nb1_implement_resnet_from_scratch.ipynb) and [6.2](./ch6_nb2_denoise_with_autoencoders.ipynb)).
 - [mnist_utils.py](mnist_utils.py): utility functions for the _MNIST_ dataset, using `tensorflow-datasets` (code presented in notebook [6.1](./ch6_nb1_discover_autoencoders.ipynb)).
 - [plot_utils.py](plot_utils.py): utility functions to display results (code presented in notebook [6.2](./ch6_nb2_denoise_with_autoencoders.ipynb)).
 - [tf_losses_and_metrics.py](tf_losses_and_metrics.py): custom losses and metrics to train/evalute CNNs (code presented in notebooks [6.5](./ch6_nb5_build_and_train_a_fcn8s_semantic_segmentation_model_for_smart_cars.ipynb) and [6.6](./ch6_nb6_build_and_train_a_unet_for_urban_object_and_instance_segmentation.ipynb)).

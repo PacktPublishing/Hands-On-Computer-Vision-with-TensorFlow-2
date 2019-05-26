@@ -3,9 +3,9 @@
     <img src="./banner_images/book_cover.png" width=200 align="right">
 </a>
 
-_Leverage deep learning to create powerful computer vision apps with TensorFlow 2 and Keras._
+_Leverage deep learning to create powerful computer vision apps with TensorFlow 2.0 and Keras._
 
-This repository contains the code for the book ***Hands On Computer Vision with TensorFlow 2*** by [Eliot Andres](https://github.com/EliotAndres) and [Benjamin Planche](https://github.com/Aldream), published by [Packt](https://www.packtpub.com/?utm_source=github).
+This repository contains the code for the book ***Hands On Computer Vision with TensorFlow 2*** by [Benjamin Planche](https://github.com/Aldream) and [Eliot Andres](https://github.com/EliotAndres), published by [Packt](https://www.packtpub.com/?utm_source=github).
 
 More precisely, this repository offers several notebooks to illustrate each of the chapters and their notions, as well as the complete sources for the advanced projects used as examples along the book. Note that this repository is meant to complement the book. Therefore, we suggest to check out its content for more detailed explanations and advanced tips.
 
@@ -15,7 +15,7 @@ Computer vision is achieving a new frontier of capabilities in artificial intell
 
 ## :wrench: Technical Requirements
 
-The code is in the form of [Jupyter](http://jupyter.org/) notebooks. Unless specified otherwise, it is running using Python 3.5 (or higher) and TensorFlow 1.10. Installation instructions are presented in the book (we recommend [Anaconda](https://anaconda.org/) to manage the dependencies like [numpy](http://www.numpy.org/), [matplotlib](https://matplotlib.org), etc.).
+The code is in the form of [Jupyter](http://jupyter.org/) notebooks. Unless specified otherwise, it is running using Python 3.5 (or higher) and TensorFlow 2.0. Installation instructions are presented in the book (we recommend [Anaconda](https://anaconda.org/) to manage the dependencies like [numpy](http://www.numpy.org/), [matplotlib](https://matplotlib.org), etc.).
 
 ## :books: Table of Content
 
@@ -47,10 +47,12 @@ The code is in the form of [Jupyter](http://jupyter.org/) notebooks. Unless spec
 - Chapter 7 - [Training on Complex and Scarce Datasets](/Chapter07)
     - 7.1 - [Setting up Efficient Input Pipelines with `tf.data`](./Chapter07/ch7_nb1_set_up_efficient_input_pipelines_with_tf_data.ipynb)
     - 7.2 - [Generating and Parsing TFRecords](./Chapter07/ch7_nb2_generate_and_parse_tfrecords.ipynb)
-    - 7.3 - (TBD) Rendering Images from 3D Models
-    - 7.4 - (TBD) Apply Domain Adaptation Methods to Bridge the Realism Gap
-    - 7.5 - (TBD) Create Images with Variational Auto-Encoders (VAEs)
-    - 7.6 - (TBD) Create Images with Generative-Adversarial Networks (GANs)
+    - 7.3 - [Rendering Images from 3D Models](./Chapter07/ch7_nb3_render_images_from_3d_models.ipynb)
+    - 7.4 - [Training a Segmentation Model on Synthetic Images](./Chapter07/ch7_nb4_train_segmentation_model_on_synthetic_images.ipynb)
+    - 7.5 - [Training a Simple Domain Adversarial Network](./Chapter07/ch7_nb5_train_a_simple_domain_adversarial_network_(dann).ipynb)
+    - 7.6 - [Applying DANN to Train the Segmentation Model on SYnthetic Data](./Chapter07/ch7_nb6_apply_dann_to_train_segmentation_model_on_synthetic_data.ipynb)
+    - 7.7 - [Generating Images with VAEs](./Chapter07/ch7_nb7_generate_images_with_vae_models.ipynb)
+    - 7.8 - [Generating Images with GANs](./Chapter07/ch7_nb8_generate_images_with_gan_models.ipynb) 	
 - Chapter 8 - [Video and Recurrent Neural Networks ](/Chapter08)
     - 8.1 - [Action recognition using an LSTM](./Chapter08/ch8_nb1_action_recognition.ipynb)
 - Chapter 9 - [Optimizing Models and Deploying on Mobile Devices](/Chapter09)
@@ -60,13 +62,14 @@ The code is in the form of [Jupyter](http://jupyter.org/) notebooks. Unless spec
     - [iOS app](./Chapter09/coreml_ios)
     - [Android app](./Chapter09/tf_lite_android)
     - [Tensorflow.js app](./Chapter09/tfjs)
+
 ## :scroll: Citing
 
 If you use the code samples in your study/work or want to cite the book, please use:
 
 ```bibtex
 @book{Andres_Planche_HandsOnCVWithTF2,
- author = {Andres, Eliot and Planche, Benjamin},
+ author = {Planche, Benjamin and Andres, Eliot},
  title = {Hands-On Computer Vision with TensorFlow 2},
  year = {2019},
  isbn = {TBD},
@@ -80,23 +83,23 @@ If you use the code samples in your study/work or want to cite the book, please 
         <tbody>
             <tr>
                 <th scope="row">MLA</th>
-                <td>Andres, Eliot and Planche Benjamin. <i>Hands-On Computer Vision with TensorFlow 2</i>. Packt Publishing Ltd, 2019.</td>
+                <td>Planche, Benjamin and Andres, Eliot. <i>Hands-On Computer Vision with TensorFlow 2</i>. Packt Publishing Ltd, 2019.</td>
             </tr>
             <tr>
                 <th scope="row">APA</th>
-                <td>Andres, E., & Planche B. (2019). <i>Hands-On Computer Vision with TensorFlow 2</i>. Packt Publishing Ltd.</td>
+                <td>Planche B., & Andres, E. (2019). <i>Hands-On Computer Vision with TensorFlow 2</i>. Packt Publishing Ltd.</td>
             </tr>
             <tr>
                 <th scope="row">Chicago</th>
-                <td>Andres, Eliot, and Planche, Benjamin. <i>Hands-On Computer Vision with TensorFlow 2</i>. Packt Publishing Ltd, 2019.</td>
+                <td>Planche, Benjamin, and Andres, Eliot. <i>Hands-On Computer Vision with TensorFlow 2</i>. Packt Publishing Ltd, 2019.</td>
             </tr>
             <tr>
                 <th scope="row">Harvard</th>
-                <td>Andres, E. and Planche B., 2019. <i>Hands-On Computer Vision with TensorFlow 2</i>. Packt Publishing Ltd.</td>
+                <td>Planche B. and Andres, E., 2019. <i>Hands-On Computer Vision with TensorFlow 2</i>. Packt Publishing Ltd.</td>
             </tr>
             <tr>
                 <th scope="row">Vancouver</th>
-                <td>Andres E, Planche B. Hands-On Computer Vision with TensorFlow 2. Packt Publishing Ltd; 2019.</td>
+                <td>Planche B, Andres E. Hands-On Computer Vision with TensorFlow 2. Packt Publishing Ltd; 2019.</td>
             </tr>
         </tbody>
     </table>
