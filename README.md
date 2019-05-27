@@ -5,13 +5,15 @@
 
 _Leverage deep learning to create powerful computer vision apps with TensorFlow 2.0 and Keras._
 
-This repository contains the code for the book ***Hands On Computer Vision with TensorFlow 2*** by [Benjamin Planche](https://github.com/Aldream) and [Eliot Andres](https://github.com/EliotAndres), published by [Packt](https://www.packtpub.com/?utm_source=github).
+This repository is dedicated to the book ***Hands On Computer Vision with TensorFlow 2*** by [Benjamin Planche](https://github.com/Aldream) and [Eliot Andres](https://github.com/EliotAndres), published by [Packt](https://www.packtpub.com/?utm_source=github).
 
-More precisely, this repository offers several notebooks to illustrate each of the chapters and their notions, as well as the complete sources for the advanced projects used as examples along the book. Note that this repository is meant to complement the book. Therefore, we suggest to check out its content for more detailed explanations and advanced tips.
+This repository offers several notebooks to illustrate each of the chapters and their notions, as well as the complete sources for the advanced projects used as examples in the book. Note that this repository is meant to complement the book. Therefore, we suggest to check out its content for more detailed explanations and advanced tips.
 
 ## :mag_right: About the Book
 
-Computer vision is achieving a new frontier of capabilities in artificial intelligence including medical screening, self-driving cars and expression detection. TensorFlow is one of the most widely used AI frameworks that leverages deep convolutional neural networks to process complex data. This book explores Google's open source TensorFlow 2 framework along its Keras API, and teaches how to apply them to solving advanced computer vision tasks. It will help you acquire the skills and understand vital concepts to be a part of the extraordinary advances in this domain. 
+Computer vision solutions are becoming increasingly common, making their way in fields such as health, automobile, social media, and robotics. This book will help you explore TensorFlow 2, the brand new version of Google's open source framework for machine learning. You will understand how to benefit from using convolutional neural networks (CNNs) for visual tasks.
+
+_Hands-On Computer Vision with TensorFlow 2_ starts with the fundamentals of computer vision and deep learning, teaching you how to build a neural network from scratch. You will discover the features that have made TensorFlow the most widely used AI library, along with its intuitive Keras interface, and move on to building, training, and deploying CNNs efficiently. Complete with concrete code examples, the book demonstrates how to classify images with modern solutions, such as Inception and ResNet, and extract specific content using You Only Look Once (YOLO), Mask R-CNN, and U-Net. You will also build Generative Adversarial Networks (GANs) and Variational Auto-Encoders (VAEs) to create and edit images, and LSTMs to analyze videos. In the process, you will acquire advanced insights into transfer learning, data augmentation, domain adaptation, and mobile and web deployment, among other key concepts. By the end of the book, you will have both the theoretical understanding and practical skills to solve advanced computer vision problems with TensorFlow 2.0.
 
 ## :wrench: Technical Requirements
 
@@ -50,7 +52,7 @@ The code is in the form of [Jupyter](http://jupyter.org/) notebooks. Unless spec
     - 7.3 - [Rendering Images from 3D Models](./Chapter07/ch7_nb3_render_images_from_3d_models.ipynb)
     - 7.4 - [Training a Segmentation Model on Synthetic Images](./Chapter07/ch7_nb4_train_segmentation_model_on_synthetic_images.ipynb)
     - 7.5 - [Training a Simple Domain Adversarial Network](./Chapter07/ch7_nb5_train_a_simple_domain_adversarial_network_(dann).ipynb)
-    - 7.6 - [Applying DANN to Train the Segmentation Model on SYnthetic Data](./Chapter07/ch7_nb6_apply_dann_to_train_segmentation_model_on_synthetic_data.ipynb)
+    - 7.6 - [Applying DANN to Train the Segmentation Model on Synthetic Data](./Chapter07/ch7_nb6_apply_dann_to_train_segmentation_model_on_synthetic_data.ipynb)
     - 7.7 - [Generating Images with VAEs](./Chapter07/ch7_nb7_generate_images_with_vae_models.ipynb)
     - 7.8 - [Generating Images with GANs](./Chapter07/ch7_nb8_generate_images_with_gan_models.ipynb) 	
 - Chapter 8 - [Video and Recurrent Neural Networks ](/Chapter08)
