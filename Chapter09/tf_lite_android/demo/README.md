@@ -3,11 +3,11 @@
 A simple Android example that demonstrates image classification using the camera.
 
 ## Building in Android Studio with TensorFlow Lite AAR from JCenter.
-The build.gradle is configured to use TensorFlow Lite's nightly build.
+The `build.gradle` file is configured to use TensorFlow Lite's nightly build.
 
-If you see a build error related to compatibility with Tensorflow Lite's Java API (example: method X is
-undefined for type Interpreter), there has likely been a backwards compatible
-change to the API. You will need to pull new app code that's compatible with the
+If you see a build error related to compatibility with TensorFlow Lite's Java API (example: "_method X is
+undefined for type Interpreter_"), there has likely been a backward incompatible
+change to the API. You will need to pull new app code that is compatible with the
 nightly build and may need to first wait a few days for our external and internal
 code to merge.
 
@@ -16,7 +16,7 @@ code to merge.
 1. Follow the [Bazel steps for the TF Demo App](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android#bazel):
 
   1. [Install Bazel and Android Prerequisites](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android#install-bazel-and-android-prerequisites).
-     It's easiest with Android Studio.
+     It's easier with Android Studio.
 
       - You'll need at least SDK version 23.
       - Make sure to install the latest version of Bazel. Some distributions
@@ -30,7 +30,7 @@ code to merge.
      to add SDK and NDK targets.
 
      NOTE: As long as you have the SDK and NDK installed, the `./configure`
-     script will create these rules for you. Answer "Yes" when the script asks
+     script will create these rules for you. Answer "_Yes_" when the script asks
      to automatically configure the `./WORKSPACE`.
 
       - Make sure the `api_level` in `WORKSPACE` is set to an SDK version that
