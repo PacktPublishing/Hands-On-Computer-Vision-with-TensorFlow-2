@@ -36,8 +36,9 @@ The code is in the form of [Jupyter](http://jupyter.org/) notebooks. Unless spec
     - 4.3 - [Fetching Models from TensorFlow Hub](./Chapter04/ch4_nb3_fetch_models_from_tf_hub.ipynb)
     - 4.4 - [Applying Transfer Learning](./Chapter04/ch4_nb4_apply_transfer_learning.ipynb)
     - 4.5 - (Appendix) [Exploring ImageNet and Tiny-ImageNet](./Chapter04/ch4_nb5_explore_imagenet_and_its_tiny_version.ipynb)
- - Chapter 5
-    - 5.1 - (TBD) Training a YOLO model
+ - Chapter 5 - [Object Detection Models](/Chapter05)
+    - 5.1 - [Running YOLO inference](./Chapter05/ch5_nb1_yolo_inference.ipynb)
+    - 5.2 - (TBD) Training a YOLO model
  - Chapter 6 - [Enhancing and Segmenting Images](./Chapter06)
     - 6.1 - [Discovering Auto-Encoders](./Chapter06/ch6_nb1_discover_autoencoders.ipynb)
     - 6.2 - [Denoising with Auto-Encoders](./Chapter06/ch6_nb2_denoise_with_autoencoders.ipynb)
