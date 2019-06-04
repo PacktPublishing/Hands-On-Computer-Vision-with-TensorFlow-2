@@ -168,17 +168,6 @@ is a freelance deep learning and computer vision engineer. He has more than 3 ye
 His focus is industrialization: delivering value by applying new technologies to business problems. Eliot keeps his knowledge up to date by publishing articles on his blog and by building prototypes using the latest technologies.
 
 
-## Other books by the authors
-[]()
-
-[]()
-
-[]()
-
-[]()
-
-[]()
-
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
 
