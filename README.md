@@ -1,6 +1,6 @@
 # Hands-On Computer Vision with TensorFlow 2
 
-<a href="https://www.packtpub.com/application-development/hands-computer-vision-tensorflow-2?utm_source=github&utm_medium=repository&utm_campaign="><img src="./banner_images/book_cover.png" alt="Hands-On Computer Vision with TensorFlow 2" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/application-development/hands-computer-vision-tensorflow-2?utm_source=github&utm_medium=repository&utm_campaign=9781788830645"><img src="./banner_images/book_cover.png" alt="Hands-On Computer Vision with TensorFlow 2" height="256px" align="right"></a>
 
 This is the code repository for [Hands-On Computer Vision with TensorFlow 2](https://www.packtpub.com/application-development/hands-computer-vision-tensorflow-2), published by Packt.
 
