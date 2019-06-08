@@ -6,7 +6,7 @@ This is the code repository for [Hands-On Computer Vision with TensorFlow 2](htt
 
 **Leverage deep learning to create powerful image processing apps with TensorFlow 2.0 and Keras**
 
-## What is this book about?
+## :mag_right: What is this book about?
 Computer vision solutions are becoming increasingly common, making their way in fields such as health, automobile, social media, and robotics. This book will help you explore TensorFlow 2, the brand new version of Google's open source framework for machine learning. You will understand how to benefit from using convolutional neural networks (CNNs) for visual tasks. 
 
 _Hands-On Computer Vision with TensorFlow 2_ starts with the fundamentals of computer vision and deep learning, teaching you how to build a neural network from scratch. You will discover the features that have made TensorFlow the most widely used AI library, along with its intuitive Keras interface, and move on to building, training, and deploying CNNs efficiently. Complete with concrete code examples, the book demonstrates how to classify images with modern solutions, such as Inception and ResNet, and extract specific content using You Only Look Once (YOLO), Mask R-CNN, and U-Net. You will also build Generative Adversarial Networks (GANs) and Variational Auto-Encoders (VAEs) to create and edit images, and LSTMs to analyze videos. In the process, you will acquire advanced insights into transfer learning, data augmentation, domain adaptation, and mobile and web deployment, among other key concepts. By the end of the book, you will have both the theoretical understanding and practical skills to solve advanced computer vision problems with TensorFlow 2.0.
@@ -20,27 +20,58 @@ This book covers the following exciting features:
 * Use recurrent neural networks for video analysis
 * Optimize and deploy your networks on mobile devices and in the browser
 
-
 If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1788830644) today!
 
 <a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
 alt="https://www.packtpub.com/" border="5" /></a>
 
-## Instructions and Navigations
-All of the code is organized into folders. For example, Chapter02.
+## :wrench: Instructions and Navigation
 
-The code will look like the following:
-```
-import tensorflow as tf
-
-x1 = tf.constant([[0, 1], [2, 3]])
-x2 = tf.constant(10)
-x = x1 * x2
-```
-
-**Following is what you need for this book:**
 If you’re new to deep learning and have some background in Python programming and image processing, like reading/writing image files and editing pixels, this book is for you. Even if you’re an expert curious about the new TensorFlow 2 features, you’ll find this book useful.
 While some theoretical explanations require knowledge in algebra and calculus, the book covers concrete examples for learners focused on practical applications such as visual recognition for self-driving cars and smartphone apps.
+
+The code is in the form of **[Jupyter](http://jupyter.org/) notebooks**. Unless specified otherwise, it is running using **Python 3.5 (or higher)** and **TensorFlow 2.0**. Installation instructions are presented in the book (we recommend [Anaconda](https://anaconda.org/) to manage the dependencies like [numpy](http://www.numpy.org/), [matplotlib](https://matplotlib.org), etc.).
+
+As described in the following subsections, the provided Jupyter notebooks can either be studied directly or can be used as code recipes to run and reproduce the experiments presented in the book.
+
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781788830645_ColorImages.pdf).
+
+### Study the Jupyter notebooks online
+
+If you simply want to go through the provided code and results, you can directly access them online in the book's GitHub repository. Indeed, GitHub is able to render Jupyter notebooks and to display them as static web pages.
+However, the GitHub viewer ignores some style formatting and interactive content. For the best online viewing experience, we recommend using instead **Jupyter nbviewer** (https://nbviewer.jupyter.org), an official web platform you can use to read Jupyter notebooks uploaded online. This website can be queried to render notebooks stored in GitHub repositories. Therefore, the Jupyter notebooks provided can also be read at the following address: https://nbviewer.jupyter.org/github/PacktPublishing/Hands-On-Computer-Vision-with-TensorFlow-2.
+
+### Run the Jupyter notebooks on your machine
+
+To read or run these documents on your machine, you should first install Jupyter Notebook. For those who already use Anaconda (https://www.anaconda.com) to manage and deploy their Python environments (as we will recommend in this book), Jupyter Notebook should be directly available (as it is installed with Anaconda). For those using other Python distributions and those not familiar with Jupyter Notebook, we recommend having a look at the documentation, which provides installation instructions and tutorials (https://jupyter.org/documentation).
+
+Once Jupyter Notebook is installed on your machine, navigate to the directory containing the book's code files, open a terminal, and execute the following command:
+
+    $ jupyter notebook
+    
+The web interface should open in your default browser. From there, you should be able to navigate the directory and open the Jupyter notebooks provided, either to read, execute, or edit them.
+
+Some documents contain advanced experiments that can be extremely compute-intensive (such as the training of recognition algorithms over large datasets). Without the proper acceleration hardware (that is, without compatible NVIDIA GPUs, as explained in Chapter 2, _TensorFlow Basics and Training a Model_), these scripts can take hours or even days (even with compatible GPUs, the most advanced examples can take quite some time).
+
+### Run the Jupyter notebooks in Google Colab
+
+For those who wish to run the Jupyter notebooks themselves—or play with new experiments—but do not have access to a powerful enough machine, we recommend using **Google Colab**, also named Colaboratory (https://colab.research.google.com). It is a cloud-based Jupyter environment, provided by Google, for people to run compute-intensive scripts on powerful machines.
+
+### Software and Hardware List 
+With the following software and hardware list you can run all code files present in the book (Chapter 1-9).
+
+| Chapter| Software required                                           | OS required                        |
+| -------| ------------------------------------------------------------| ---------------------------------- |
+| 1-9    | Jupyter Notebook                                            | Windows, Mac OS X, and Linux (Any) |
+| 1-9    | Python 3.5 and above, NumPy, Matplotlib, Anaconda (Optional)| Windows, Mac OS X, and Linux (Any) |
+| 2-9    | TensorFlow, tensorflow-gpu                                  | Windows, Mac OS X, and Linux (Any) |
+| 3      | Scikit-Image                                                | Windows, Mac OS X, and Linux (Any) |
+| 4      | TensorFlow Hub                                              | Windows, Mac OS X, and Linux (Any) |
+| 6      | pydensecrf library                                          | Windows, Mac OS X, and Linux (Any) |
+| 7      | Vispy, Plyfile                                              | Windows, Mac OS X, and Linux (Any) |
+| 8      | opencv-python, tqdm, scikit-learn                           | Windows, Mac OS X, and Linux (Any) |
+| 9      | Android Studio, Cocoa Pods, Yarn                            | Windows, Mac OS X, and Linux (Any) |
+
 
 ## :books: Table of Content
 
@@ -89,23 +120,17 @@ While some theoretical explanations require knowledge in algebra and calculus, t
     - [Android app](./Chapter09/tf_lite_android)
     - [Tensorflow.js app](./Chapter09/tfjs)
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-9).
-### Software and Hardware List 
-| Chapter| Software required                                           | OS required                        |
-| -------| ------------------------------------------------------------| ---------------------------------- |
-| 1-9    | Jupyter Notebook                                            | Windows, Mac OS X, and Linux (Any) |
-| 1      | Python 3.5 and above, NumPy, Matplotlib, Anaconda (Optional)| Windows, Mac OS X, and Linux (Any) |
-| 2      | TensorFlow, tensorflow-gpu                                  | Windows, Mac OS X, and Linux (Any) |
-| 3      | Scikit-Image                                                | Windows, Mac OS X, and Linux (Any) |
-| 4      | TensorFlow Hub                                              | Windows, Mac OS X, and Linux (Any) |
-| 6      | pydensecrf library                                          | Windows, Mac OS X, and Linux (Any) |
-| 7      | Vispy, Plyfile                                              | Windows, Mac OS X, and Linux (Any) |
-| 8      | opencv-python, tqdm, scikit-learn                           | Windows, Mac OS X, and Linux (Any) |
-| 9      | Android Studio, Cocoa Pods, Yarn                            | Windows, Mac OS X, and Linux (Any) |
+## :busts_in_silhouette: Get to Know the Authors
+**Benjamin Planche**
+is a passionate PhD student at the University of Passau and Siemens Corporate Technology. He has been working in various research labs around the world (LIRIS in France, Mitsubishi Electric in Japan, and Siemens in Germany) in the fields of computer vision and deep learning for more than five years. Benjamin has a double master's degree with first-class honors from INSA-Lyon, France, and the University of Passau, Germany.
+His research efforts are focused on developing smarter visual systems with less data, targeting industrial applications. Benjamin also shares his knowledge and experience on online platforms, such as StackOverflow, or applies this knowledge to the creation of aesthetic demos.
 
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781788830645_ColorImages.pdf).
 
-## :scroll: Citing
+**Eliot Andres**
+is a freelance deep learning and computer vision engineer. He has more than 3 years' experience in the field, applying his skills to a variety of industries, such as banking, health, social media, and video streaming. Eliot has a double master's degree from École des Ponts and Télécom, Paris.
+His focus is industrialization: delivering value by applying new technologies to business problems. Eliot keeps his knowledge up to date by publishing articles on his blog and by building prototypes using the latest technologies.
+
+## :scroll: Referencing
 
 If you use the code samples in your study/work or want to cite the book, please use:
 
@@ -114,8 +139,8 @@ If you use the code samples in your study/work or want to cite the book, please 
  author = {Planche, Benjamin and Andres, Eliot},
  title = {Hands-On Computer Vision with TensorFlow 2},
  year = {2019},
- isbn = {TBD},
- publisher = {Packt Publishing},
+ isbn = {1788839269},
+ publisher = {Packt Publishing Ltd},
 }
 ```
 
@@ -156,16 +181,6 @@ If you use the code samples in your study/work or want to cite the book, please 
 * Mastering OpenCV 4 with Python [[Packt]](https://www.packtpub.com/application-development/mastering-opencv-4-python?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1789344913)
 
 * OpenCV 4 for Secret Agents - Second Edition [[Packt]](https://www.packtpub.com/application-development/opencv-4-secret-agents-second-edition?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1789345367)
-
-## Get to Know the Author
-**Benjamin Planche**
-is a passionate PhD student at the University of Passau and Siemens Corporate Technology. He has been working in various research labs around the world (LIRIS in France, Mitsubishi Electric in Japan, and Siemens in Germany) in the fields of computer vision and deep learning for more than five years. Benjamin has a double master's degree with first-class honors from INSA-Lyon, France, and the University of Passau, Germany.
-His research efforts are focused on developing smarter visual systems with less data, targeting industrial applications. Benjamin also shares his knowledge and experience on online platforms, such as StackOverflow, or applies this knowledge to the creation of aesthetic demos.
-
-
-**Eliot Andres**
-is a freelance deep learning and computer vision engineer. He has more than 3 years' experience in the field, applying his skills to a variety of industries, such as banking, health, social media, and video streaming. Eliot has a double master's degree from École des Ponts and Télécom, Paris.
-His focus is industrialization: delivering value by applying new technologies to business problems. Eliot keeps his knowledge up to date by publishing articles on his blog and by building prototypes using the latest technologies.
 
 
 ### Suggestions and Feedback
