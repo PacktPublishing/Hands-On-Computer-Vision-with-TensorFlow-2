@@ -142,7 +142,7 @@ If you use the code samples in your study/work or want to cite the book, please 
  author = {Planche, Benjamin and Andres, Eliot},
  title = {Hands-On Computer Vision with TensorFlow 2},
  year = {2019},
- isbn = {1788839269},
+ isbn = {978-1788830645},
  publisher = {Packt Publishing Ltd},
 }
 ```
