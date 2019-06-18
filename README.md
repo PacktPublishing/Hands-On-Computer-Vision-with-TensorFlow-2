@@ -1,13 +1,14 @@
 # Hands-On Computer Vision with TensorFlow 2
 
-<a href="https://www.packtpub.com/application-development/hands-computer-vision-tensorflow-2?utm_source=github&utm_medium=repository&utm_campaign=9781788830645"><img src="./banner_images/book_cover.png" alt="Hands-On Computer Vision with TensorFlow 2" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/application-development/hands-computer-vision-tensorflow-2?utm_source=github&utm_medium=repository&utm_campaign=9781788830645"><img src="./banner_images/book_cover.png" alt="Hands-On Computer Vision with TensorFlow 2" height="270px" align="right"></a>
 
 **Leverage deep learning to create powerful image processing apps with TensorFlow 2.0 and Keras**
 
-This is the code repository for [Hands-On Computer Vision with TensorFlow 2](https://www.packtpub.com/application-development/hands-computer-vision-tensorflow-2) by [Benjamin Planche](https://github.com/benjaminplanche) and [Eliot Andres](https://github.com/EliotAndres), published by Packt.
+This is the code repository for [Hands-On Computer Vision with TensorFlow 2](https://www.packtpub.com/application-development/hands-computer-vision-tensorflow-2) by [Benjamin Planche](https://github.com/benjaminplanche) and [Eliot Andres](https://github.com/EliotAndres), published by Packt. 
 
 This book is a practical guide to building high performance systems for object detection, segmentation, video processing, smartphone applications, and more. It is based on TensorFlow 2, the new version of Google's open-source library for machine learning.
 
+This repository offers several notebooks to illustrate each of the chapters, as well as the complete sources for the advanced projects presented in the book. *Note that this repository is meant to complement the book. Therefore, we suggest to check out its content for more detailed explanations and advanced tips*.
 
 ## :mag_right: What is this book about?
 Computer vision solutions are becoming increasingly common, making their way in fields such as health, automobile, social media, and robotics. This book will help you explore TensorFlow 2, the brand new version of Google's open source framework for machine learning. You will understand how to benefit from using convolutional neural networks (CNNs) for visual tasks. 
