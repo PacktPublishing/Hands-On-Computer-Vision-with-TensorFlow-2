@@ -39,9 +39,10 @@ class Neuron(object):
     def __init__(self, num_inputs, activation_function):
         super().__init__()
 
-        # Randomly initializing the weight vector and the bias value:
-        self.W = np.random.rand(num_inputs)
-        self.b = np.random.rand(1)
+        # Randomly initializing the weight vector and the bias value (e.g., using a simplistic 
+        # uniform distribution between -1 and 1):
+        self.W = np.random.uniform(size=num_inputs, low=-1., high=1.)
+        self.b = np.random.uniform(size=1, low=-1., high=1.)
 
         self.activation_function = activation_function
 
