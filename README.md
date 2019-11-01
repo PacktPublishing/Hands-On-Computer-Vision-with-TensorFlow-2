@@ -181,6 +181,17 @@ If you use the code samples in your study/work or want to cite the book, please 
 </p>
 </details>
 
+## Errata
+* Page 18: **stand of the heart** _should be_ **state-of-the-art**
+* Page 24: **graphical processing unit** _should be_ **graphics processing unit**
+* Page 55: **before hand** _should be_ **beforehand**
+* Page 76: **indiacting** _should be_ **indicating**
+* Page 90: **depth dimensions into a single vector** _should be_ **depth dimensions into a single dimension**
+* Page 178: **bceause** _should be_ **because**
+* Page 183: **smaller than the input and target latent spaces** _should be_ **smaller than the input and target spaces**
+* Page 214: **cannot only** _should be_ **can not only**
+* Page 254: **Jupyter Notebooks** _should be_ **Jupyter notebooks**
+
 ### Related products
 * Mastering OpenCV 4 with Python [[Packt]](https://www.packtpub.com/application-development/mastering-opencv-4-python?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1789344913)
 
