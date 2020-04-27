@@ -56,10 +56,10 @@ def fcn_8s(image_size, ch_in=3, ch_out=3):
     f5_conv3 = Conv2D(filters=ch_out, kernel_size=1, padding='same',
                       activation=None)(f5_drop2)
 
-    # Using a transposed conv (w/ s=2) to upscale `f5` into a 14 x 14 map
+    # Using a transposed conv (w/ s=2) to upscale `f5_conv3` into a 14 x 14 map
     # so it can be merged with features from `f4_conv1` obtained from `f4`:
     f5_conv3_x2 = Conv2DTranspose(filters=ch_out, kernel_size=4, strides=2,
-                                  use_bias=False, padding='same', activation='relu')(f5)
+                                  use_bias=False, padding='same', activation='relu')(f5_conv3)
     f4_conv1 = Conv2D(filters=ch_out, kernel_size=1, padding='same',
                       activation=None)(f4)
 
